@@ -13,10 +13,14 @@ namespace Datos
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector { get; }
+        public SqlDataReader Lector
+        {
+            get { return lector; }
+        }
         public AccesoDatos()
         {
             conexion = new SqlConnection("server= .\\SQLEXPRESS; Database=Catalogo_P3_DB; integrated security = true;");
+            comando = new SqlCommand();
         }
 
         public void setearConsulta(string consulta)
