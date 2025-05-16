@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_Winform
 {
-    public partial class frmPrinciapl : Form
+    public partial class frmPrincipal : Form
     {
-        public frmPrinciapl()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
