@@ -10,28 +10,28 @@ using System.Windows.Forms;
 
 namespace TP_Winform
 {
-    public partial class FmrPrincipal : Form
+    public partial class frmPrinciapl : Form
     {
-        public FmrPrincipal()
+        public frmPrinciapl()
         {
             InitializeComponent();
         }
 
         private void agregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            From1 vtnAticulo = new From1();
+            frmAltaProducto vtnAticulo = new frmAltaProducto();
             vtnAticulo.ShowDialog();
         }
 
         private void EditarUnArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 vtnEditar = new Form2();
-            vtnEditar.ShowDialog();
+            frmAltaProducto alta = new frmAltaProducto();
+            alta.ShowDialog();
         }
 
         private void eliminarUnArticuloToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form3 vtnEliminar = new Form3();
+            frmEliminar vtnEliminar = new frmEliminar();
             vtnEliminar.ShowDialog();
         }
 
@@ -40,5 +40,7 @@ namespace TP_Winform
             frmResultado vtnResultado = new frmResultado();
             vtnResultado.ShowDialog();
         }
+
+
     }
 }

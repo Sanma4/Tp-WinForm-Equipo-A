@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TP_Winform
 {
-    public partial class Form2 : Form
+    public partial class frmAltaProducto : Form
     {
-        public Form2()
+        public frmAltaProducto()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_Winform
 {
-    public partial class Form3 : Form
+    public partial class frmEliminar : Form
     {
-        public Form3()
+        public frmEliminar()
         {
             InitializeComponent();
         }

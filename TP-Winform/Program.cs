@@ -16,7 +16,7 @@ namespace TP_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FmrPrincipal());
+            Application.Run(new frmPrinciapl());
         }
     }
 }
