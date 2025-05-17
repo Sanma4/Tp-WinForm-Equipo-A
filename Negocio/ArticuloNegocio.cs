@@ -33,10 +33,13 @@ namespace Negocio
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
-                    aux.Imagen = new Imagen();
-                    aux.Imagen.Id = (int)datos.Lector["Id"];
-                    aux.Imagen.Url = (string)datos.Lector["ImagenUrl"];
-
+                    //foreach (var imagen in aux.Imagen)
+                    //{
+                    //    imagen.Id = (int)datos.Lector["Id"];
+                    //    imagen.Url = (string)datos.Lector["ImagenUrl"];
+                    //    aux.Imagen = imagen;
+                    //}
+                    
                     lista.Add(aux);
                 }
                 

@@ -68,5 +68,23 @@ namespace TP_Winform
                 CargarImagen(seleccionado.Imagen.Url);
             }
         }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltro.Text;
+            if (filtro != "")
+            {
+               listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+
+            dgvArticulo.DataSource = null; //Seteo la grilla en nada para no duplicar articulos
+            dgvArticulo.DataSource = listaFiltrada; //Asigno nuevos datos
+            OcultarColumnas();
+        }
     }
 }
