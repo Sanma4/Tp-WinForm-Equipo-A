@@ -58,7 +58,7 @@ namespace Datos
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
