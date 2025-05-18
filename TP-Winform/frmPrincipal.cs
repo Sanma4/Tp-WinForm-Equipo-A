@@ -104,5 +104,13 @@ namespace TP_Winform
 
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            frmAltaProducto frmEdit = new frmAltaProducto(seleccionado);
+            frmEdit.ShowDialog();
+            Cargar();
+        }
     }
 }

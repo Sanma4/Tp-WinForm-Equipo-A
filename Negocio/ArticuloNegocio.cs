@@ -47,7 +47,7 @@ namespace Negocio
                                 Id = (int)datos.Lector["IdImagen"],
                                 Url = (string)datos.Lector["ImagenUrl"],
                                 IdArticulo = (int)datos.Lector["IdArticulo"]
-                                
+
                             };
                             aux.Imagen.Add(img);
                         }
@@ -146,6 +146,30 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+
+            if (articulo.Imagen != null && articulo.Imagen.Count > 0)
+            {
+
+                AccesoDatos datosImg = new AccesoDatos();
+                try
+                {
+                    datosImg.setearConsulta("Update Imagenes set ImagenUrl = @Url where Id = @Id");
+                    datosImg.setearParametro("@Url", articulo.Imagen[0].Url);
+                    datosImg.setearParametro("@Id", articulo.Imagen[0].Id);
+
+                    datosImg.ejecutarAccion();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    datosImg.cerrarConexion();
+                }
+
             }
         }
     }

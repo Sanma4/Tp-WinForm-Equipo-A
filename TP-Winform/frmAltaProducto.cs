@@ -33,6 +33,7 @@ namespace TP_Winform
             CategoriaNegocio categoria = new CategoriaNegocio();
             try
             {
+
                 cboMarca.DataSource = marca.ListarMarcas();
                 cboMarca.ValueMember = "Id";
                 cboMarca.DisplayMember = "Descripcion";
@@ -40,6 +41,20 @@ namespace TP_Winform
                 cboCategoria.DataSource = categoria.ListarCategorias();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
+                if (_articulo != null)
+                {
+                    txtCodigo.Text = _articulo.Codigo;
+                    txtNombre.Text = _articulo.Nombre;
+                    txtDescripcion.Text = _articulo.Descripcion;
+                    cboMarca.SelectedValue = _articulo.Marca.Id;
+                    cboCategoria.SelectedValue = _articulo.Categoria.Id;
+                    txtPrecio.Text = _articulo.Precio.ToString();
+
+                    if (_articulo.Imagen != null && _articulo.Imagen.Count > 0)
+                    {
+                        txtImagen.Text = _articulo.Imagen[0].Url;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -82,11 +97,16 @@ namespace TP_Winform
                 _articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 _articulo.Marca = (Marca)cboMarca.SelectedItem;
 
-                
+
+
 
                 if (_articulo.Id != 0)
                 {
+                    _articulo.Imagen[0].Url = txtImagen.Text;
                     negocio.Modificar(_articulo);
+                    MessageBox.Show("¡Producto modificado correctamente!");
+                    MessageBox.Show($"Actualizando imagen con ID: {_articulo.Imagen[0].Id}, URL: {_articulo.Imagen[0].Url}");
+
                 }
                 else
                 {
@@ -94,7 +114,6 @@ namespace TP_Winform
                     {
                         Url = txtImagen.Text
                     });
-
                     negocio.Agregar(_articulo);
                     MessageBox.Show("¡Producto agregado correctamente!");
                 }
