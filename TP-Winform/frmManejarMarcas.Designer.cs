@@ -37,14 +37,14 @@
             // dgvMarcas
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(37, 17);
+            this.dgvMarcas.Location = new System.Drawing.Point(30, 17);
             this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.Size = new System.Drawing.Size(239, 150);
+            this.dgvMarcas.Size = new System.Drawing.Size(261, 150);
             this.dgvMarcas.TabIndex = 5;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(161, 182);
+            this.btnEditar.Location = new System.Drawing.Point(176, 182);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(115, 36);
             this.btnEditar.TabIndex = 4;
@@ -54,7 +54,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(37, 182);
+            this.btnAgregar.Location = new System.Drawing.Point(30, 182);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(116, 36);
             this.btnAgregar.TabIndex = 3;
@@ -73,7 +73,8 @@
             this.MaximumSize = new System.Drawing.Size(345, 273);
             this.MinimumSize = new System.Drawing.Size(345, 273);
             this.Name = "frmManejarMarcas";
-            this.Text = "frmManejarMarcas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Acciones Marcas";
             this.Load += new System.EventHandler(this.frmManejarMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);

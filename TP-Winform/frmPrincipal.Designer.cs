@@ -49,15 +49,15 @@
             this.dgvArticulo.Location = new System.Drawing.Point(12, 83);
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulo.Size = new System.Drawing.Size(624, 302);
+            this.dgvArticulo.Size = new System.Drawing.Size(543, 302);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(654, 83);
+            this.pbxArticulo.Location = new System.Drawing.Point(581, 31);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(380, 302);
+            this.pbxArticulo.Size = new System.Drawing.Size(453, 354);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 1;
             this.pbxArticulo.TabStop = false;

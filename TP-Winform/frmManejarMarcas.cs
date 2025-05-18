@@ -49,8 +49,10 @@ namespace TP_Winform
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Marca seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-            frmEditarMarca marca = new frmEditarMarca(seleccionado);
+            frmAgregarMarca marca = new frmAgregarMarca(seleccionado);
             marca.ShowDialog();
+            Cargar();
+
         }
     }
 }

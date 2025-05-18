@@ -36,7 +36,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(38, 186);
+            this.btnAgregar.Location = new System.Drawing.Point(26, 186);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(116, 36);
             this.btnAgregar.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(160, 186);
+            this.btnEditar.Location = new System.Drawing.Point(178, 186);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(110, 36);
             this.btnEditar.TabIndex = 1;
@@ -57,9 +57,9 @@
             // dgvCategorias
             // 
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(38, 21);
+            this.dgvCategorias.Location = new System.Drawing.Point(26, 21);
             this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.Size = new System.Drawing.Size(232, 150);
+            this.dgvCategorias.Size = new System.Drawing.Size(262, 150);
             this.dgvCategorias.TabIndex = 2;
             // 
             // frmManejarCategorias

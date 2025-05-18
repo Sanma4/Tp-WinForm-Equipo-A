@@ -23,19 +23,34 @@ namespace TP_Winform
         {
             frmAgregarCategoria agregar = new frmAgregarCategoria();
             agregar.ShowDialog();
+            Cargar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Categoria seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
-            frmEditarCategoria editar = new frmEditarCategoria(seleccionado);
+            frmAgregarCategoria editar = new frmAgregarCategoria(seleccionado);
             editar.ShowDialog();
+            Cargar();
         }
 
         private void frmManejarCategorias_Load(object sender, EventArgs e)
         {
-            CategoriaNegocio negocio = new CategoriaNegocio();
-            dgvCategorias.DataSource = negocio.ListarCategorias();
+            Cargar();
+        }
+
+        private void Cargar()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                dgvCategorias.DataSource = negocio.ListarMarcas();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

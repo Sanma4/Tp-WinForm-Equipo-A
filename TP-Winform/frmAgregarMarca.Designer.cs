@@ -35,7 +35,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(94, 149);
+            this.btnAgregar.Location = new System.Drawing.Point(92, 150);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(101, 30);
             this.btnAgregar.TabIndex = 5;
@@ -72,6 +72,7 @@
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Marca";
+            this.Load += new System.EventHandler(this.frmAgregarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

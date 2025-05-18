@@ -58,18 +58,6 @@
     <Compile Include="frmAgregarMarca.Designer.cs">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditarCategoria.Designer.cs">
-      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEditarMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditarMarca.Designer.cs">
-      <DependentUpon>frmEditarMarca.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManejarCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,12 +95,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarMarca.resx">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarCategoria.resx">
-      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarMarca.resx">
-      <DependentUpon>frmEditarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManejarCategorias.resx">
       <DependentUpon>frmManejarCategorias.cs</DependentUpon>
