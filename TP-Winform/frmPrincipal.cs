@@ -112,5 +112,27 @@ namespace TP_Winform
             frmEdit.ShowDialog();
             Cargar();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                var respuesta = MessageBox.Show("¿Esta seguro de eliminar este Articulo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta != DialogResult.Yes)
+                    return;
+
+                negocio.Eliminar(seleccionado.Id);
+                Cargar();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

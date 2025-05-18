@@ -172,5 +172,43 @@ namespace Negocio
 
             }
         }
+
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Delete from Articulos where Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            AccesoDatos datosImg = new AccesoDatos();
+            try
+            {
+                datosImg.setearConsulta("Delete from Imagenes where IdArticulo = @Id");
+                datosImg.setearParametro("@Id", id);
+                datosImg.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datosImg.cerrarConexion();
+            }
+        }
     }
 }
