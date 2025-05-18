@@ -10,6 +10,8 @@ namespace Negocio
 {
     public class CategoriaNegocio
     {
+
+
         public List<Categoria> ListarCategorias()
         {
             List<Categoria> lista = new List<Categoria>();
@@ -30,6 +32,47 @@ namespace Negocio
                 }
 
                 return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Agregar(string descripcion)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert into Categorias values(@Descripcion)");
+                datos.setearParametro("@Descripcion", descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Editar(Categoria categoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update Categorias set Descripcion = @Descripcion where Id = @Id");
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
+                datos.setearParametro("@Id", categoria.Id);
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {

@@ -46,6 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCategoria.Designer.cs">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarMarca.Designer.cs">
+      <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCategoria.Designer.cs">
+      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarMarca.Designer.cs">
+      <DependentUpon>frmEditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManejarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManejarCategorias.Designer.cs">
+      <DependentUpon>frmManejarCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManejarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManejarMarcas.Designer.cs">
+      <DependentUpon>frmManejarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,22 +94,40 @@
     <Compile Include="frmAltaProducto.Designer.cs">
       <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmResultado.cs">
+    <Compile Include="frmVerDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmResultado.Designer.cs">
-      <DependentUpon>frmResultado.cs</DependentUpon>
+    <Compile Include="frmVerDetalle.Designer.cs">
+      <DependentUpon>frmVerDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarCategoria.resx">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarMarca.resx">
+      <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCategoria.resx">
+      <DependentUpon>frmEditarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarMarca.resx">
+      <DependentUpon>frmEditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManejarCategorias.resx">
+      <DependentUpon>frmManejarCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManejarMarcas.resx">
+      <DependentUpon>frmManejarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaProducto.resx">
       <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResultado.resx">
-      <DependentUpon>frmResultado.cs</DependentUpon>
+    <EmbeddedResource Include="frmVerDetalle.resx">
+      <DependentUpon>frmVerDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

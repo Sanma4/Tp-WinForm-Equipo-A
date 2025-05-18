@@ -24,7 +24,7 @@ namespace TP_Winform
         {
             InitializeComponent();
             _articulo = articulo;
-            Text = "Agrar artículo";
+            Text = "Editar artículo";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,7 +88,11 @@ namespace TP_Winform
             try
             {
                 if (_articulo == null)
+                {
                    _articulo = new Articulo();
+                    Text = "Agregar artículo";
+                }
+
 
                 _articulo.Nombre = txtNombre.Text;
                 _articulo.Descripcion = txtDescripcion.Text;
@@ -104,9 +108,7 @@ namespace TP_Winform
                 {
                     _articulo.Imagen[0].Url = txtImagen.Text;
                     negocio.Modificar(_articulo);
-                    MessageBox.Show("¡Producto modificado correctamente!");
-                    MessageBox.Show($"Actualizando imagen con ID: {_articulo.Imagen[0].Id}, URL: {_articulo.Imagen[0].Url}");
-
+                    MessageBox.Show("¡Artículo modificado correctamente!");
                 }
                 else
                 {
@@ -115,7 +117,7 @@ namespace TP_Winform
                         Url = txtImagen.Text
                     });
                     negocio.Agregar(_articulo);
-                    MessageBox.Show("¡Producto agregado correctamente!");
+                    MessageBox.Show("¡Artículo agregado correctamente!");
                 }
                 
             }

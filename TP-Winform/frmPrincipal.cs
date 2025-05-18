@@ -134,5 +134,25 @@ namespace TP_Winform
                 throw ex;
             }
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            frmVerDetalle detalle = new frmVerDetalle(seleccionado);
+            detalle.ShowDialog();
+            
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmManejarCategorias manejar = new frmManejarCategorias();
+            manejar.ShowDialog();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            frmManejarMarcas manejar = new frmManejarMarcas();
+            manejar.ShowDialog();
+        }
     }
 }
