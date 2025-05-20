@@ -101,6 +101,7 @@
             this.MaximumSize = new System.Drawing.Size(804, 465);
             this.MinimumSize = new System.Drawing.Size(804, 465);
             this.Name = "frmManejarImagenes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Imagenes";
             this.Load += new System.EventHandler(this.frmManejarImagenes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvImagenes)).EndInit();

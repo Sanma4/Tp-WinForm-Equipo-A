@@ -81,6 +81,7 @@
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblUrl);
             this.Name = "frmAgregarImagen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Imagen";
             this.Load += new System.EventHandler(this.frmAgregarImagen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenes)).EndInit();

@@ -183,6 +183,7 @@ namespace TP_Winform
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             frmManejarImagenes imagenes = new frmManejarImagenes(seleccionado.Id);
             imagenes.ShowDialog();
+            Cargar();
         }
     }
 }

@@ -70,8 +70,16 @@ namespace TP_Winform
             ImagenNegocio negocio = new ImagenNegocio();
             try
             {
-                negocio.Eliminar(Id);
-                MessageBox.Show("¿Esta seguro que quiere eliminar la imagen?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var resultado = MessageBox.Show("¿Esta seguro que quiere eliminar la imagen?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    negocio.Eliminar(seleccionado.Id);
+                    MessageBox.Show("Se ha eliminado su imagen");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha eliminado su imagen");
+                }
                 Cargar();
             }
             catch (Exception ex)
