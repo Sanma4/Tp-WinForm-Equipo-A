@@ -41,7 +41,7 @@
             this.dgvMarcas.Location = new System.Drawing.Point(30, 17);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarcas.Size = new System.Drawing.Size(261, 150);
             this.dgvMarcas.TabIndex = 5;
             // 

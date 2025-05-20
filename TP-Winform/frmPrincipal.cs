@@ -156,17 +156,6 @@ namespace TP_Winform
             manejar.ShowDialog();
         }
 
-        private void pbxArticulo_Click(object sender, EventArgs e)
-        {
-            foreach (var prod in listaArticulos)
-            {
-                prod.Imagen = listaImagen.FindAll(l => l.IdArticulo == prod.Id);
-                if (prod.Imagen != null && prod.Imagen.Count > 0)
-                {
-
-                }
-            }
-        }
 
         private void pbxArticulo_MouseClick(object sender, MouseEventArgs e)
         {

@@ -62,7 +62,6 @@
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 1;
             this.pbxArticulo.TabStop = false;
-            this.pbxArticulo.Click += new System.EventHandler(this.pbxArticulo_Click);
             this.pbxArticulo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbxArticulo_MouseClick);
             // 
             // btnAgregar
