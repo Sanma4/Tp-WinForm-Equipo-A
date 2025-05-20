@@ -180,7 +180,9 @@ namespace TP_Winform
 
         private void btnImagenes_Click(object sender, EventArgs e)
         {
-
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            frmManejarImagenes imagenes = new frmManejarImagenes(seleccionado.Id);
+            imagenes.ShowDialog();
         }
     }
 }
