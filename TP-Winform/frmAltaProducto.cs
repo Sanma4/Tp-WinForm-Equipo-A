@@ -49,11 +49,6 @@ namespace TP_Winform
                     cboMarca.SelectedValue = _articulo.Marca.Id;
                     cboCategoria.SelectedValue = _articulo.Categoria.Id;
                     txtPrecio.Text = _articulo.Precio.ToString();
-
-                    if (_articulo.Imagen != null && _articulo.Imagen.Count > 0)
-                    {
-                        txtImagen.Text = _articulo.Imagen[0].Url;
-                    }
                 }
             }
             catch (Exception ex)
@@ -67,21 +62,10 @@ namespace TP_Winform
 
         private void txtImagen_TextChanged_1(object sender, EventArgs e)
         {
-            CargarImagen(txtImagen.Text);
+            
         }
 
-        private void CargarImagen(string urlImagen)
-        {
-            try
-            {
-                pbxAgregarArticulo.Load(urlImagen);
-            }
-            catch (Exception)
-            {
-                pbxAgregarArticulo.Load("https://media.istockphoto.com/id/1409329028/es/vector/no-hay-imagen-disponible-marcador-de-posici%C3%B3n-miniatura-icono-dise%C3%B1o-de-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=Bd89b8CBr-IXx9mBbTidc-wu_gtIj8Py_EMr3hGGaPw=");
-            }
-        }
-
+     
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
@@ -106,16 +90,12 @@ namespace TP_Winform
 
                 if (_articulo.Id != 0)
                 {
-                    _articulo.Imagen[0].Url = txtImagen.Text;
                     negocio.Modificar(_articulo);
                     MessageBox.Show("¡Artículo modificado correctamente!");
                 }
                 else
                 {
-                    _articulo.Imagen.Add(new Imagen
-                    {
-                        Url = txtImagen.Text
-                    });
+                   
                     negocio.Agregar(_articulo);
                     MessageBox.Show("¡Artículo agregado correctamente!");
                 }

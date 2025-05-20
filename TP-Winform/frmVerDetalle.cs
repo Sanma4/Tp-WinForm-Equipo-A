@@ -43,6 +43,7 @@ namespace TP_Winform
                 cboCategoria.DisplayMember = "Descripcion";
                 if (_articulo != null)
                 {
+                    txtId.Text = _articulo.Id.ToString();
                     txtCodigo.Text = _articulo.Codigo ;
                     txtNombre.Text = _articulo.Nombre;
                     txtDescripcion.Text = _articulo.Descripcion;
@@ -50,18 +51,14 @@ namespace TP_Winform
                     cboCategoria.SelectedValue = _articulo.Categoria.Id;
                     txtPrecio.Text = _articulo.Precio.ToString();
                     
-                    foreach (var control in new Control[]{ txtCodigo, txtNombre, txtDescripcion, txtImagen, txtPrecio})
+                    
+                    foreach (var control in new Control[]{ txtCodigo, txtNombre, txtDescripcion,txtId, txtPrecio})
                     {
                         ((TextBox)control).ReadOnly = true;
                     }
 
                     cboMarca.Enabled = false;
                     cboCategoria.Enabled = false;
-                    if (_articulo.Imagen != null && _articulo.Imagen.Count > 0)
-                    {
-                        txtImagen.Text = _articulo.Imagen[0].Url;
-                    }
-                    CargarImagen(txtImagen.Text);
                 }
             }
             catch (Exception ex)
@@ -70,17 +67,6 @@ namespace TP_Winform
             }
         }
 
-        private void CargarImagen(string url)
-        {
-            try
-            {
-                pbxAgregarArticulo.Load(url);
-            }
-            catch (Exception )
-            {
-                pbxAgregarArticulo.Load("https://media.istockphoto.com/id/1409329028/es/vector/no-hay-imagen-disponible-marcador-de-posici%C3%B3n-miniatura-icono-dise%C3%B1o-de-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=Bd89b8CBr-IXx9mBbTidc-wu_gtIj8Py_EMr3hGGaPw=");
-            }
-        }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
