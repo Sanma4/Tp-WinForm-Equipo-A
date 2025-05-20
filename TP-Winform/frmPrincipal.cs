@@ -14,7 +14,7 @@ namespace TP_Winform
 {
     public partial class frmPrincipal : Form
     {
-
+        private int indiceImagen = 0;
         private List<Articulo> listaArticulos;
         private List<Imagen> listaImagen = new List<Imagen>();
         public frmPrincipal()
@@ -171,11 +171,17 @@ namespace TP_Winform
         private void pbxArticulo_MouseClick(object sender, MouseEventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            var imagenes = seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id);
 
-            foreach (var prod in seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id))
-            {
-               CargarImagen(prod.Url);
-            }
+            if (imagenes.Count == 0)
+                return;
+
+            if (indiceImagen >= imagenes.Count)
+                indiceImagen = 0;
+
+            CargarImagen(imagenes[indiceImagen].Url);
+
+            indiceImagen++;
         }
 
         private void btnImagenes_Click(object sender, EventArgs e)
@@ -185,5 +191,7 @@ namespace TP_Winform
             imagenes.ShowDialog();
             Cargar();
         }
+
+
     }
 }
