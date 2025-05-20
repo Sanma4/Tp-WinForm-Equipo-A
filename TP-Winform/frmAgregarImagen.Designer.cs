@@ -80,6 +80,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblUrl);
+            this.MaximizeBox = false;
             this.Name = "frmAgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Imagen";

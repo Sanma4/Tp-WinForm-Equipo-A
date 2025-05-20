@@ -30,6 +30,7 @@ namespace TP_Winform
             ImagenNegocio negocio = new ImagenNegocio();
             List<Imagen> lista = negocio.ListarImagenesId(Id);
             dgvImagenes.DataSource = lista;
+            dgvImagenes.Columns["Id"].Visible = false;
             CargarImagen(lista[0].Url);
         }
         private void CargarImagen(string url)

@@ -168,6 +168,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulo);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1074, 489);
             this.MinimumSize = new System.Drawing.Size(1074, 489);
             this.Name = "frmPrincipal";

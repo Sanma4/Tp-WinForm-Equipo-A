@@ -67,6 +67,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(321, 285);
             this.MinimumSize = new System.Drawing.Size(321, 285);
             this.Name = "frmAgregarCategoria";

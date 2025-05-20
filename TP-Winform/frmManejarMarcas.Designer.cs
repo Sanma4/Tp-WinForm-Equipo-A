@@ -73,6 +73,7 @@
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(345, 273);
             this.MinimumSize = new System.Drawing.Size(345, 273);
             this.Name = "frmManejarMarcas";

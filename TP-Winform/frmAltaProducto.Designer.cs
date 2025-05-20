@@ -181,6 +181,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(421, 489);
             this.MinimumSize = new System.Drawing.Size(421, 489);
             this.Name = "frmAltaProducto";

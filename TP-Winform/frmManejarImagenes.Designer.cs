@@ -45,7 +45,7 @@
             this.dgvImagenes.MultiSelect = false;
             this.dgvImagenes.Name = "dgvImagenes";
             this.dgvImagenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvImagenes.Size = new System.Drawing.Size(313, 303);
+            this.dgvImagenes.Size = new System.Drawing.Size(245, 303);
             this.dgvImagenes.TabIndex = 0;
             this.dgvImagenes.SelectionChanged += new System.EventHandler(this.dgvImagenes_SelectionChanged);
             // 
@@ -61,7 +61,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(142, 372);
+            this.btnEditar.Location = new System.Drawing.Point(103, 372);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(260, 372);
+            this.btnEliminar.Location = new System.Drawing.Point(184, 372);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -81,9 +81,9 @@
             // 
             // pbxImagenes
             // 
-            this.pbxImagenes.Location = new System.Drawing.Point(359, 29);
+            this.pbxImagenes.Location = new System.Drawing.Point(346, 29);
             this.pbxImagenes.Name = "pbxImagenes";
-            this.pbxImagenes.Size = new System.Drawing.Size(404, 366);
+            this.pbxImagenes.Size = new System.Drawing.Size(417, 366);
             this.pbxImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenes.TabIndex = 4;
             this.pbxImagenes.TabStop = false;
@@ -98,6 +98,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvImagenes);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(804, 465);
             this.MinimumSize = new System.Drawing.Size(804, 465);
             this.Name = "frmManejarImagenes";
