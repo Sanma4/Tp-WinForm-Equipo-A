@@ -24,7 +24,7 @@ namespace TP_Winform
 
         public void OcultarColumnas()
         {
-            //dgvArticulo.Columns["Id"].Visible = false;
+            dgvArticulo.Columns["Id"].Visible = false;
             //dgvArticulo.Columns["Imagen"].Visible = false;
             dgvArticulo.Columns["Codigo"].Visible = false;
         }
