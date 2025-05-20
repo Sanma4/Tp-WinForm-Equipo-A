@@ -38,6 +38,7 @@
             this.btnDetalle = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
+            this.btnImagenes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,8 @@
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 1;
             this.pbxArticulo.TabStop = false;
+            this.pbxArticulo.Click += new System.EventHandler(this.pbxArticulo_Click);
+            this.pbxArticulo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbxArticulo_MouseClick);
             // 
             // btnAgregar
             // 
@@ -121,7 +124,7 @@
             // 
             // btnCategorias
             // 
-            this.btnCategorias.Location = new System.Drawing.Point(865, 403);
+            this.btnCategorias.Location = new System.Drawing.Point(878, 403);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(75, 23);
             this.btnCategorias.TabIndex = 8;
@@ -139,11 +142,22 @@
             this.btnMarcas.UseVisualStyleBackColor = true;
             this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
+            // btnImagenes
+            // 
+            this.btnImagenes.Location = new System.Drawing.Point(797, 403);
+            this.btnImagenes.Name = "btnImagenes";
+            this.btnImagenes.Size = new System.Drawing.Size(75, 23);
+            this.btnImagenes.TabIndex = 10;
+            this.btnImagenes.Text = "Imagenes";
+            this.btnImagenes.UseVisualStyleBackColor = true;
+            this.btnImagenes.Click += new System.EventHandler(this.btnImagenes_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 450);
+            this.Controls.Add(this.btnImagenes);
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnDetalle);
@@ -179,5 +193,6 @@
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.Button btnImagenes;
     }
 }

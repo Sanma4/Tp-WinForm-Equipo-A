@@ -16,6 +16,7 @@ namespace TP_Winform
     {
 
         private List<Articulo> listaArticulos;
+        private List<Imagen> listaImagen = new List<Imagen>();
         public frmPrincipal()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace TP_Winform
 
         public void OcultarColumnas()
         {
-            dgvArticulo.Columns["Id"].Visible = false;
+            //dgvArticulo.Columns["Id"].Visible = false;
             //dgvArticulo.Columns["Imagen"].Visible = false;
             dgvArticulo.Columns["Codigo"].Visible = false;
         }
@@ -45,7 +46,7 @@ namespace TP_Winform
             try
             {
                 listaArticulos = negocio.ListarArticulos();
-                List<Imagen> listaImagen = imagen.ListarImagenes();
+                listaImagen = imagen.ListarImagenes();
                 dgvArticulo.DataSource = listaArticulos;
                 CargarImagen(listaImagen[0].Url);
                 OcultarColumnas();
@@ -68,9 +69,9 @@ namespace TP_Winform
             if (dgvArticulo.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-                foreach (var img in seleccionado.Imagen)
+                if (seleccionado.Imagen.Count > 0)
                 {
-                    CargarImagen(img.Url);
+                    CargarImagen(seleccionado.Imagen[0].Url);
                 }
 
             }
@@ -140,7 +141,7 @@ namespace TP_Winform
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             frmVerDetalle detalle = new frmVerDetalle(seleccionado);
             detalle.ShowDialog();
-            
+
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
@@ -153,6 +154,33 @@ namespace TP_Winform
         {
             frmManejarMarcas manejar = new frmManejarMarcas();
             manejar.ShowDialog();
+        }
+
+        private void pbxArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (var prod in listaArticulos)
+            {
+                prod.Imagen = listaImagen.FindAll(l => l.IdArticulo == prod.Id);
+                if (prod.Imagen != null && prod.Imagen.Count > 0)
+                {
+
+                }
+            }
+        }
+
+        private void pbxArticulo_MouseClick(object sender, MouseEventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            foreach (var prod in seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id))
+            {
+               CargarImagen(prod.Url);
+            }
+        }
+
+        private void btnImagenes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

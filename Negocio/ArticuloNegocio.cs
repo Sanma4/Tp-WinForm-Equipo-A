@@ -35,7 +35,7 @@ namespace Negocio
                         aux.Precio = (decimal)datos.Lector["Precio"];
                         aux.Marca = new Marca();
                         aux.Marca.Id = (int)datos.Lector["IdMarca"];
-                        aux.Marca.Descripcion = (string)datos.Lector["Categoria"];
+                        aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                         aux.Categoria = new Categoria();
                         aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                         aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
