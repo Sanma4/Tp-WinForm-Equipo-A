@@ -160,13 +160,13 @@ namespace TP_Winform
         private void pbxArticulo_MouseClick(object sender, MouseEventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            var imagenes = seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id);
+            var imagenes = seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id); //Cargo la lista y agrupo por articulo
 
             if (imagenes.Count == 0)
                 return;
 
             if (indiceImagen >= imagenes.Count)
-                indiceImagen = 0;
+                indiceImagen = 0; //Actualizo el indice para poder girar en si misma
 
             CargarImagen(imagenes[indiceImagen].Url);
 

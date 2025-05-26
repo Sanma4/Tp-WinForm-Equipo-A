@@ -100,16 +100,6 @@ namespace Negocio
 
                 datos.cerrarConexion();
 
-                foreach (var img in articulo.Imagen)
-                {
-                    AccesoDatos datosImg = new AccesoDatos();
-
-                    datosImg.setearConsulta("INSERT INTO IMAGENES VALUES (@IdArticulo, @Url)");
-                    datosImg.setearParametro("@IdArticulo", articulo.Id);
-                    datosImg.setearParametro("@Url", img.Url);
-
-                    datosImg.ejecutarAccion();
-                }
 
             }
             catch (Exception ex)
@@ -148,29 +138,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
 
-            if (articulo.Imagen != null && articulo.Imagen.Count > 0)
-            {
-
-                AccesoDatos datosImg = new AccesoDatos();
-                try
-                {
-                    datosImg.setearConsulta("Update Imagenes set ImagenUrl = @Url where Id = @Id");
-                    datosImg.setearParametro("@Url", articulo.Imagen[0].Url);
-                    datosImg.setearParametro("@Id", articulo.Imagen[0].Id);
-
-                    datosImg.ejecutarAccion();
-                }
-                catch (Exception ex)
-                {
-
-                    throw ex;
-                }
-                finally
-                {
-                    datosImg.cerrarConexion();
-                }
-
-            }
         }
 
         public void Eliminar(int id)
@@ -192,22 +159,6 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
-            }
-            AccesoDatos datosImg = new AccesoDatos();
-            try
-            {
-                datosImg.setearConsulta("Delete from Imagenes where IdArticulo = @Id");
-                datosImg.setearParametro("@Id", id);
-                datosImg.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datosImg.cerrarConexion();
             }
         }
     }
