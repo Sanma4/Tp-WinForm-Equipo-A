@@ -15,6 +15,7 @@ namespace TP_Winform
     public partial class frmPrincipal : Form
     {
         private int indiceImagen = 0;
+        private int idArticuloAnterior = -1;
         private List<Articulo> listaArticulos;
         private List<Imagen> listaImagen = new List<Imagen>();
         public frmPrincipal()
@@ -160,16 +161,22 @@ namespace TP_Winform
         private void pbxArticulo_MouseClick(object sender, MouseEventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            var imagenes = seleccionado.Imagen.FindAll(l => l.IdArticulo == seleccionado.Id); //Cargo la lista y agrupo por articulo
 
-            if (imagenes.Count == 0)
+            if (seleccionado.Id != idArticuloAnterior)
+            {
+                indiceImagen = 0;
+                idArticuloAnterior = seleccionado.Id;
+            }
+
+            var imagenes = seleccionado.Imagen;
+
+            if (imagenes == null || imagenes.Count == 0)
                 return;
 
             if (indiceImagen >= imagenes.Count)
-                indiceImagen = 0; //Actualizo el indice para poder girar en si misma
+                indiceImagen = 0;
 
             CargarImagen(imagenes[indiceImagen].Url);
-
             indiceImagen++;
         }
 
